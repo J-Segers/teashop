@@ -1,15 +1,25 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Helvetica;
-    color: seashell;
-    background-color: black;
     opacity: .9;
-    text-align: center;
 }
 
 body {
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* typography */
+h1, h2,
+h3, h4,
+p, a {
+    font-family: Helvetica;
+    color: seashell;
+    text-align: center;
 }
 
 p, a {
@@ -20,6 +30,7 @@ p, a {
 
 header {
     box-sizing: border-box;
+    width: 100vw;
     height: 69px;
     border-bottom: 1px solid seashell;
     display: flex;
@@ -32,12 +43,114 @@ header .logo img {
     height: 50px;
 }
 
+nav a+a {
+    margin-left: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* components */
 .logo {
     display: flex;
     align-items: center;
 }
 
-nav a+a{
-    margin-left: 16px;
-
+#mission, #mission-span {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
 }
+
+#mission {
+    width: 1200px;
+    height: 700px;    
+    background-image: url("./assets/img-mission-background.jpg");
+    background-position: center;
+}
+
+#mission-span {
+    width: 1200px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    opacity: 1;
+}
+
+.month {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1000px;
+}
+
+.month h2 {
+    width: 100%;
+    margin-top: 75px;
+}
+
+.month h4 {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.month article+article {
+    margin-left: 24px;
+}
+
+.month article {
+    width: 300px;
+    height: auto;
+    margin-top: 24px;
+}
+
+article img {
+    width: 100%;
+}
+
+article h4 {
+    margin-top: 10px;
+}
+
+.locations {
+    width: 1200px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./assets/img-locations-background.jpg");
+    margin-top: 75px;
+}
+
+.locations h2 {
+    width: 100%;
+}
+
+.locations article {
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.locations article+article {
+    margin-left: 40px;
+}
+
+.locations article p {
+    line-height: 3em;
+}
+
