@@ -1,11 +1,10 @@
 * {
     margin: 0;
-    padding: 0;
     opacity: .9;
 }
 
 body {
-    width: 100vw;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,8 +13,7 @@ body {
 }
 
 /* typography */
-h1, h2,
-h3, h4,
+h2, h4,
 h5, p,
 a {
     font-family: Helvetica;
@@ -23,10 +21,16 @@ a {
     text-align: center;
 }
 
-h1, h2,
-h3, h4,
+h2 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.17em;
+}
+
 h5 {
-    transform: scale(125%);
+    font-size: 1em;
 }
 
 p, a {
@@ -67,7 +71,7 @@ main {
     align-items: center;
 }
 
-#mission, #mission-span {
+#mission, .mission-span {
     display: flex;
     flex-direction: column ;
     justify-content: center;
@@ -81,15 +85,22 @@ main {
     background-position: center;
 }
 
-#mission-span {
+.mission-span {
     width: 1200px;
     height: 100px;
+    box-sizing: border-box;
+    padding-top: 16px;
+    padding-bottom: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: black;
     opacity: 1;
+}
+
+.mission-span h2 {
+    margin: 0;
 }
 
 .month {
@@ -169,15 +180,19 @@ footer {
     align-items: flex-start;
 }
 
-footer .contact {
+.contact {
     height: 200px;
     margin: 15px auto;
 }
 
-.contact h5 {
-    margin: 40px auto;
+.contact h2 {
+    width: 400px;
 }
 
+.contact h5 {
+    width: 400px;
+    margin: 40px 0;
+}
 
 footer p {
     margin: 20px;
